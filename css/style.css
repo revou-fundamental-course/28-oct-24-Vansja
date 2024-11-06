@@ -1,0 +1,261 @@
+/* Reset dasar untuk seluruh halaman */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Kunci scroll saat kelas 'lock-scroll' ada di body */
+body.lock-scroll {
+    overflow: hidden;
+}
+
+/* Gaya untuk banner utama */
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background slide umum */
+.background-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Slide aktif */
+.active-slide {
+    opacity: 1;
+}
+
+/* Overlay gelap pada banner */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Menggelapkan gambar latar */
+    z-index: 1;
+}
+
+/* Gaya untuk teks dan tombol scroll di atas overlay */
+.banner h1,
+.scroll-button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Gaya untuk judul banner */
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Gaya tombol scroll */
+.scroll-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect untuk tombol scroll */
+.scroll-button:hover {
+    color: white;
+    background-color: #8b0000; /* Ganti warna menjadi merah tua */
+}
+
+/* Gaya untuk konten di bawah banner */
+.content {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* Gaya untuk form dan elemen gender */
+.form-container {
+    border: 2px solid #000; /* Border di sekitar form */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 20px;
+    margin: 20px auto; /* Center the form container */
+    max-width: 400px; /* Maximum width */
+    text-align: center; /* Center the text inside */
+    background-color: #fff; /* Background color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Gaya untuk form gender */
+.gender-form {
+    display: flex; /* Mengatur elemen di dalam form agar ditampilkan secara horizontal */
+    justify-content: center; /* Center the gender options */
+    margin-bottom: 20px; /* Menambahkan jarak di bawah form gender */
+}
+
+.gender-option {
+    display: flex; /* Memastikan opsi ditampilkan dalam satu baris */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    margin-right: 20px; /* Menambahkan jarak antar opsi radio */
+}
+
+input[type="radio"] {
+    display: none; /* Menyembunyikan tombol radio default */
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc; /* Border di sekitar gambar */
+    border-radius: 8px; /* Membuat sudut membulat */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.custom-radio img {
+    width: 30px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: 30px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+input[type="radio"]:checked + .custom-radio {
+    border-color: #007BFF; /* Warna border saat dipilih */
+}
+
+/* Gaya untuk input berat dan tinggi */
+input[type="number"] {
+    width: calc(100% - 22px); /* Full width for input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    padding: 10px; /* Padding inside input fields */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Border style for inputs */
+}
+
+/* Gaya untuk tombol hitung */
+button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker button on hover */
+}
+
+.form-container {
+    border: 2px solid rgb(67, 169, 67); /* Mengatur border dengan ketebalan 2px, solid, dan berwarna biru */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 20px;
+    margin: 20px auto; /* Center the form container */
+    max-width: 400px; /* Maximum width */
+    text-align: center; /* Center the text inside */
+    background-color: #ffffff; /* Background color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Gaya untuk hasil kalkulator */
+.result-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antar elemen */
+    justify-content: center; /* Pusatkan elemen di tengah */
+    margin-top: 20px; /* Tambahkan jarak dari elemen di atas */
+}
+
+.result, .scorebar-container {
+    width: 200px; /* Ukuran tetap agar seragam */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result {
+    font-size: 18px;
+}
+
+/* Scorebar dan bagian dalamnya */
+.scorebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scorebar {
+    width: 180px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px; /* Jarak ke label */
+}
+
+.scorebar-color {
+    flex: 1;
+    height: 100%;
+}
+
+.kurus { background-color: lightblue; }
+.normal { background-color: green; }
+.gemuk { background-color: yellow; }
+.obesitas { background-color: orange; }
+
+/* Gaya untuk jarum */
+.needle {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: red;
+    top: -5px;
+    left: 50%; /* Awal di tengah */
+}
+
+/* Label di bawah scorebar */
+.scorebar-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}

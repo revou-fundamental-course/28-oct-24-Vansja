@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="banner">
+    <div class="background-slide slide1"></div>
+    <div class="background-slide slide2"></div>
+    <h1>Selamat Datang di Website Kami</h1>
+    <button class="scroll-button" onclick="scrollToContent()">Ayo mulai</button>
+  </div>
+
+  <div class="content" id="content"> 
+   <h1>Apa itu kalkulator BMI</h1>
+   <p> Kalkulator BMI (Indeks Massa Tubuh) adalah alat yang digunakan untuk mengukur proporsi berat badan terhadap tinggi badan seseorang. Dengan cara ini, kalkulator BMI dapat membantu menentukan apakah seseorang memiliki berat badan yang sehat, kurang, atau berlebih. Meskipun alat ini cukup sederhana, ia memberikan gambaran kasar tentang kesehatan seseorang dengan membandingkan berat badan mereka dengan standar yang umum diterima. Hasil perhitungan BMI akan dikelompokkan dalam kategori seperti "kurus", "normal", "gemuk", dan "obesitas" berdasarkan nilai yang diperoleh. Setiap kategori ini memberikan indikasi apakah seseorang berisiko mengalami masalah kesehatan tertentu yang berkaitan dengan berat badan, seperti penyakit jantung, diabetes, atau hipertensi.</p>
+    <p>Namun, penting untuk dicatat bahwa meskipun BMI dapat memberikan informasi yang berguna, hasilnya tidak selalu mencerminkan kondisi kesehatan secara keseluruhan. BMI tidak memperhitungkan faktor-faktor lain yang dapat memengaruhi kesehatan tubuh, seperti komposisi tubuh (persentase lemak tubuh versus massa otot), distribusi lemak, atau faktor genetik. Seseorang dengan BMI dalam kisaran "normal" mungkin saja memiliki persentase lemak tubuh yang lebih tinggi jika dibandingkan dengan seseorang yang berotot, sementara seseorang dengan BMI lebih tinggi bisa jadi memiliki otot lebih banyak dan sedikit lemak tubuh. Oleh karena itu, meskipun kalkulator BMI adalah alat yang berguna, evaluasi kesehatan yang lebih lengkap harus melibatkan pemeriksaan medis dan analisis lainnya.</p>
+ </div>
+
+  <br>
+
+  <h1>Kalkulator BMI</h1>
+  <br>
+  
+  <div class="form-container">
+      <form>
+          <div class="gender-form">
+              <label class="gender-option">
+                  <input type="radio" name="jenis-kelamin" value="pria">
+                  <span class="custom-radio">
+                  <img src="https://cdn4.iconfinder.com/data/icons/love-relation-symbols/512/xxx017-512.png" alt="Pria" />
+                      Pria
+                  </span>
+              </label>
+              <label class="gender-option">
+                  <input type="radio" name="jenis-kelamin" value="wanita">
+                  <span class="custom-radio">
+                  <img src="https://t3.ftcdn.net/jpg/01/37/69/42/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV.jpg" alt="Wanita" />
+                      Wanita
+                  </span>
+              </label>
+          </div>
+
+          <div class="form-controls">
+              <label for="age">Umur (tahun):</label>
+              <input type="number" id="age" required>
+              
+              <label for="weight">Berat (kg):</label>
+              <input type="number" id="weight" required>
+              
+              <label for="height">Tinggi (cm):</label>
+              <input type="number" id="height" required>
+              
+              <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+              <button type="button" id="reset-btn" onclick="resetForm()" style="display:none;">Reset</button>
+          </div>
+      </form>
+  </div>
+
+  <br>
+  <div class="result-container">
+    <div class="result" id="result">
+       <p>BMI Anda adalah: 0</p> 
+       <p> Kategori: </p> 
+       <p>Umur Anda adalah: </p> 
+    </div>
+    <div class="scorebar-container">
+        <div class="scorebar">
+            <div class="scorebar-color kurus"></div>
+            <div class="scorebar-color normal"></div>
+            <div class="scorebar-color gemuk"></div>
+            <div class="scorebar-color obesitas"></div>
+            <div class="needle" id="needle"></div>
+        </div>
+        <div class="scorebar-labels">
+            <span class="label kurus-label">Kurus</span>
+            <span class="label normal-label">Normal</span>
+            <span class="label gemuk-label">Gemuk</span>
+            <span class="label obesitas-label">Obesitas</span>
+        </div>
+        <p id="bmi-category"></p>
+    </div>
+</div>
+
+<br>
+<footer>
+    <h3>RevoU Fundamental Course- made by Vanness Jason</h3>
+</footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
