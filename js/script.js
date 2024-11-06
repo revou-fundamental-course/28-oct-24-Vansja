@@ -34,10 +34,14 @@ function changeBannerImage() {
 
     if (slide1.classList.contains('active-slide')) {
         slide2.style.backgroundImage = `url('${bannerImages[nextImageIndex]}')`;
+        slide2.style.backgroundSize = 'cover';  // Menambahkan background-size responsif
+        slide2.style.backgroundPosition = 'center center';  // Menjaga posisi gambar di tengah
         slide2.classList.add('active-slide');
         slide1.classList.remove('active-slide');
     } else {
         slide1.style.backgroundImage = `url('${bannerImages[nextImageIndex]}')`;
+        slide1.style.backgroundSize = 'cover';  // Menambahkan background-size responsif
+        slide1.style.backgroundPosition = 'center center';  // Menjaga posisi gambar di tengah
         slide1.classList.add('active-slide');
         slide2.classList.remove('active-slide');
     }
