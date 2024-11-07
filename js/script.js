@@ -26,6 +26,7 @@ const bannerImages = [
     'https://telemed.ihc.id/uploads/img_post/img_0510202216649555269K507.jpg'
 ];
 
+// Gambar banner
 let currentImageIndex = 0;
 const [slide1, slide2] = [document.querySelector('.slide1'), document.querySelector('.slide2')];
 
@@ -34,14 +35,14 @@ function changeBannerImage() {
 
     if (slide1.classList.contains('active-slide')) {
         slide2.style.backgroundImage = `url('${bannerImages[nextImageIndex]}')`;
-        slide2.style.backgroundSize = 'cover';  // Menambahkan background-size responsif
-        slide2.style.backgroundPosition = 'center center';  // Menjaga posisi gambar di tengah
+        slide2.style.backgroundSize = 'cover';  
+        slide2.style.backgroundPosition = 'center center';  
         slide2.classList.add('active-slide');
         slide1.classList.remove('active-slide');
     } else {
         slide1.style.backgroundImage = `url('${bannerImages[nextImageIndex]}')`;
-        slide1.style.backgroundSize = 'cover';  // Menambahkan background-size responsif
-        slide1.style.backgroundPosition = 'center center';  // Menjaga posisi gambar di tengah
+        slide1.style.backgroundSize = 'cover';  
+        slide1.style.backgroundPosition = 'center center';  
         slide1.classList.add('active-slide');
         slide2.classList.remove('active-slide');
     }
@@ -62,7 +63,7 @@ function scrollToContent() {
 // Menambahkan event listener untuk tombol scroll
 document.querySelector('.scroll-button').addEventListener('click', scrollToContent);
 
-// Fungsi untuk menghitung BMI
+
 // Fungsi untuk menghitung BMI
 function calculateBMI() {
     const weight = parseFloat(document.getElementById('weight').value);
@@ -101,8 +102,8 @@ function lockFormInputs() {
     document.getElementById('weight').disabled = true;
     document.getElementById('height').disabled = true;
     document.querySelectorAll('input[name="jenis-kelamin"]').forEach(input => input.disabled = true);
-    document.querySelector('button[type="button"]').style.display = 'none';  // Sembunyikan tombol hitung
-    document.getElementById('reset-btn').style.display = 'inline';  // Tampilkan tombol reset
+    document.querySelector('button[type="button"]').style.display = 'none';  
+    document.getElementById('reset-btn').style.display = 'inline';  
 }
 
 // Fungsi untuk mereset form
@@ -111,8 +112,8 @@ function resetForm() {
     document.getElementById('weight').disabled = false;
     document.getElementById('height').disabled = false;
     document.querySelectorAll('input[name="jenis-kelamin"]').forEach(input => input.disabled = false);
-    document.querySelector('button[type="button"]').style.display = 'inline';  // Tampilkan tombol hitung
-    document.getElementById('reset-btn').style.display = 'none';  // Sembunyikan tombol reset
+    document.querySelector('button[type="button"]').style.display = 'inline'; 
+    document.getElementById('reset-btn').style.display = 'none';  
     document.getElementById('result').innerHTML = `<p>BMI Anda adalah: 0</p><p>Kategori: </p><p>Umur Anda adalah: </p>`;
     document.getElementById('bmi-category').innerText = '';
     document.getElementById('weight').value = '';
@@ -144,21 +145,21 @@ function updateScorebar(bmi) {
         rotationAngle = 0;
     } else if (bmi >= 18.5 && bmi < 24.9) {
         leftPosition = 40; 
-        rotationAngle = 0; // Misalnya di sini jarum menunjukkan angka normal
+        rotationAngle = 0; 
     } else if (bmi >= 24.9 && bmi < 29.9) {
         leftPosition = 60;
-        rotationAngle = 0; // Untuk kategori gemuk
+        rotationAngle = 0; 
     } else if (bmi >= 30) {
         leftPosition = 90;
-        rotationAngle = 0; // Untuk kategori obesitas
+        rotationAngle = 0; 
     }
     
-    // Mengatur posisi jarum secara horizontal dan rotasi jarum
-    needle.style.left = `${leftPosition}%`; // Posisi kiri jarum
-    needle.style.transform = `rotate(${rotationAngle}deg)`; // Rotasi jarum
-    needle.style.transition = 'transform 0.3s ease'; // Menambahkan transisi agar gerakan jarum lebih halus
-    needle.style.backgroundColor = 'red'; // Memastikan warna jarum tetap hitam
-
+    // Mengatur posisi jarum 
+    needle.style.left = `${leftPosition}%`; 
+    needle.style.transform = `rotate(${rotationAngle}deg)`;
+    needle.style.transition = 'transform 0.3s ease'; 
+    needle.style.backgroundColor = 'red'; 
+    
     // Menampilkan kategori BMI
     document.getElementById('bmi-category').innerText = `Kategori: ${category}`;
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<!--banner-->
   <div class="banner">
     <div class="background-slide slide1"></div>
     <div class="background-slide slide2"></div>
@@ -23,29 +23,30 @@
 
 
 
-
+<!--kalkulatornya-->
   <h1>Kalkulator BMI</h1>
   <br>
-  
+    <!--jenis kelamin-->
   <div class="form-container">
       <form>
-          <div class="gender-form">
-              <label class="gender-option">
-                  <input type="radio" name="jenis-kelamin" value="pria">
-                  <span class="custom-radio">
-                  <img src="https://cdn4.iconfinder.com/data/icons/love-relation-symbols/512/xxx017-512.png" alt="Pria" />
-                      Pria
-                  </span>
-              </label>
-              <label class="gender-option">
-                  <input type="radio" name="jenis-kelamin" value="wanita">
-                  <span class="custom-radio">
-                  <img src="https://t3.ftcdn.net/jpg/01/37/69/42/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV.jpg" alt="Wanita" />
-                      Wanita
-                  </span>
-              </label>
+        <div class="gender-form">
+        <label class="gender-option">
+        <input type="radio" name="jenis-kelamin" value="pria">
+        <span class="custom-radio">
+         <img src="https://cdn4.iconfinder.com/data/icons/love-relation-symbols/512/xxx017-512.png" alt="Pria" />
+             Pria
+         </span>
+        </label>
+        <label class="gender-option">
+        <input type="radio" name="jenis-kelamin" value="wanita">
+        <span class="custom-radio">
+        <img src="https://t3.ftcdn.net/jpg/01/37/69/42/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV.jpg" alt="Wanita" />
+             Wanita
+        </span>
+        </label>
           </div>
 
+          <!--data diri-->
           <div class="form-controls">
               <label for="age">Umur (tahun):</label>
               <input type="number" id="age" required>
@@ -56,6 +57,7 @@
               <label for="height">Tinggi (cm):</label>
               <input type="number" id="height" required>
               
+              <!--tombol hitung dan reset-->
               <button type="button" onclick="calculateBMI()">Hitung BMI</button>
               <button type="button" id="reset-btn" onclick="resetForm()" style="display:none;">Reset</button>
           </div>
@@ -63,12 +65,14 @@
   </div>
 
   <br>
+  <!--Hasil dari hitungan-->
   <div class="result-container">
     <div class="result" id="result">
        <p>BMI Anda adalah: 0</p> 
        <p> Kategori: </p> 
        <p>Umur Anda adalah: </p> 
     </div>
+    <!--scorebar warna-->
     <div class="scorebar-container">
         <div class="scorebar">
             <div class="scorebar-color kurus"></div>
@@ -88,7 +92,7 @@
 </div>
 
 <hr>
-
+<!---pengertian bmi-->
 <div>
     <article>
         <img src="https://medicastore.com/images/penyakit/h_7Mx_Menghitung-Body-Mass-Index-(BMI).jpg" alt="Gambar Artikel" style="max-width: 100%; height: auto;">
@@ -147,7 +151,7 @@
 
 
 
-
+<!--isi fitur-->
 <hr>
 <div>
     <article>
@@ -161,12 +165,22 @@
         </ol>
     </article>
 </div>
+<hr>
+<!--jaga kesehatan-->
+<div class="article">
+    <h1>Jagalah Kesehatan</h1>
+    <p>Kesehatan adalah aset berharga yang sering kali baru kita sadari pentingnya ketika muncul masalah. Memiliki tubuh yang sehat memungkinkan kita untuk menjalani hidup dengan penuh energi, produktif, dan bersemangat. Kesehatan tidak hanya melibatkan kondisi fisik, tetapi juga mencakup kesehatan mental dan emosional. Kedua aspek ini saling berkaitan, sehingga menjaga keseimbangan di antara keduanya sangat penting untuk meningkatkan kualitas hidup.</p>
+    <p>Menerapkan pola hidup sehat adalah langkah pertama dalam menjaga kesehatan. Mulai dari makan makanan bergizi, rutin berolahraga, tidur yang cukup, hingga menjaga kebersihan diri merupakan kebiasaan yang bisa mendukung kesehatan secara keseluruhan. Mengonsumsi makanan seimbang yang kaya akan vitamin, mineral, dan serat, serta menghindari makanan tinggi gula dan lemak trans, akan membantu tubuh memperoleh nutrisi yang dibutuhkan untuk berfungsi optimal. Selain itu, olahraga teratur tidak hanya bermanfaat bagi kesehatan fisik, tetapi juga dapat memperbaiki suasana hati dan membantu mengurangi stres.</p>
+    <p>Selain kesehatan fisik, kesehatan mental juga penting untuk diperhatikan. Stres, kecemasan, dan depresi dapat berdampak negatif pada tubuh jika dibiarkan tanpa penanganan. Untuk menjaga kesehatan mental, penting untuk mengenali batas diri, mengelola stres dengan baik, dan tidak ragu untuk mencari bantuan jika diperlukan. Aktivitas seperti meditasi, berbicara dengan orang terdekat, atau menjalani hobi yang menyenangkan dapat membantu menjaga kesehatan mental. Dengan menjaga kesehatan secara menyeluruh, kita dapat mencapai hidup yang lebih bermakna dan bahagia.</p>
+</div>
 
+<!--footer-->
 <br>
 <footer>
     <h3>RevoU Fundamental Course- made by Vanness Jason</h3>
 </footer>
 
+<!---javascript-->
   <script src="js/script.js"></script>
 
 </body>

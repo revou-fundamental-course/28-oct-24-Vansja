@@ -53,7 +53,7 @@ body.lock-scroll {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Menggelapkan gambar latar */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
@@ -86,7 +86,7 @@ body.lock-scroll {
 /* Hover effect untuk tombol scroll */
 .scroll-button:hover {
     color: white;
-    background-color: #8b0000; /* Ganti warna menjadi merah tua */
+    background-color: #8b0000; 
 }
 
 /* Gaya untuk konten di bawah banner */
@@ -102,98 +102,98 @@ body.lock-scroll {
 
 /* Gaya untuk form dan elemen gender */
 .form-container {
-    border: 2px solid #000; /* Border di sekitar form */
-    border-radius: 10px; /* Sudut membulat */
+    border: 2px solid #000; 
+    border-radius: 10px; 
     padding: 20px;
-    margin: 20px auto; /* Center the form container */
-    max-width: 400px; /* Maximum width */
-    text-align: center; /* Center the text inside */
-    background-color: #fff; /* Background color for contrast */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin: 20px auto; 
+    max-width: 400px; 
+    text-align: center; 
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Gaya untuk form gender */
 .gender-form {
-    display: flex; /* Mengatur elemen di dalam form agar ditampilkan secara horizontal */
-    justify-content: center; /* Center the gender options */
-    margin-bottom: 20px; /* Menambahkan jarak di bawah form gender */
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 20px; 
 }
 
 .gender-option {
-    display: flex; /* Memastikan opsi ditampilkan dalam satu baris */
-    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
-    margin-right: 20px; /* Menambahkan jarak antar opsi radio */
+    display: flex;
+    align-items: center; 
+    margin-right: 20px;
 }
 
 input[type="radio"] {
-    display: none; /* Menyembunyikan tombol radio default */
+    display: none; 
 }
 
 .custom-radio {
     display: flex;
     align-items: center;
-    border: 2px solid #ccc; /* Border di sekitar gambar */
-    border-radius: 8px; /* Membuat sudut membulat */
+    border: 2px solid #ccc; 
+    border-radius: 8px;
     padding: 10px;
     cursor: pointer;
 }
 
 .custom-radio img {
-    width: 30px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-    height: 30px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-    margin-right: 10px; /* Jarak antara gambar dan teks */
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px; 
 }
 
 input[type="radio"]:checked + .custom-radio {
-    border-color: #007BFF; /* Warna border saat dipilih */
+    border-color: #007BFF; 
 }
 
 /* Gaya untuk input berat dan tinggi */
 input[type="number"] {
-    width: calc(100% - 22px); /* Full width for input fields */
-    margin-bottom: 15px; /* Space below input fields */
-    padding: 10px; /* Padding inside input fields */
-    border-radius: 5px; /* Rounded corners for inputs */
-    border: 1px solid #ccc; /* Border style for inputs */
+    width: calc(100% - 22px); 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc;
 }
 
 /* Gaya untuk tombol hitung */
 button {
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Button padding */
-    border-radius: 5px; /* Rounded corners for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition effect */
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker button on hover */
+    background-color: #0056b3; 
 }
-
+/*Mengatur ktak data diri*/
 .form-container {
-    border: 2px solid rgb(67, 169, 67); /* Mengatur border dengan ketebalan 2px, solid, dan berwarna biru */
-    border-radius: 10px; /* Sudut membulat */
+    border: 2px solid rgb(67, 169, 67);
+    border-radius: 10px; 
     padding: 20px;
-    margin: 20px auto; /* Center the form container */
-    max-width: 400px; /* Maximum width */
-    text-align: center; /* Center the text inside */
-    background-color: #ffffff; /* Background color for contrast */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin: 20px auto; 
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Gaya untuk hasil kalkulator */
 .result-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Jarak antar elemen */
-    justify-content: center; /* Pusatkan elemen di tengah */
-    margin-top: 20px; /* Tambahkan jarak dari elemen di atas */
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 20px;
 }
 
 .result, .scorebar-container {
-    width: 200px; /* Ukuran tetap agar seragam */
+    width: 200px; 
     padding: 20px;
     background-color: #f9f9f9;
     border: 2px solid #ccc;
@@ -218,7 +218,7 @@ button:hover {
     height: 20px;
     position: relative;
     display: flex;
-    margin-bottom: 10px; /* Jarak ke label */
+    margin-bottom: 10px; 
 }
 
 .scorebar-color {
@@ -231,14 +231,14 @@ button:hover {
 .gemuk { background-color: yellow; }
 .obesitas { background-color: orange; }
 
-/* Gaya untuk jarum */
+/*jarum */
 .needle {
     position: absolute;
     width: 2px;
     height: 30px;
     background-color: red;
     top: -5px;
-    left: 50%; /* Awal di tengah */
+    left: 50%; 
 }
 
 /* Label di bawah scorebar */
@@ -260,19 +260,20 @@ footer {
     width: 100%;
 }
 
+/*Layar kecil*/
 @media (max-width: 600px) {
     .banner {
         padding: 20px;
     }
     h1 {
-        font-size: 1.5rem;  /* Mengurangi ukuran font untuk perangkat kecil */
+        font-size: 1.5rem;  
     }
     .scroll-button {
         font-size: 1rem;
     }
 
     .form-container {
-        width: 90%; /* Lebih lebar pada layar kecil */
+        width: 90%; 
     }
     
     .form-controls label {
@@ -314,13 +315,13 @@ footer {
     }
 }
 
-
+/*menagtur footer*/
 footer {
-    background-color: #64ea64; /* Hijau muda */
-    padding: 20px; /* Menambahkan jarak di dalam kotak footer */
-    text-align: center; /* Mengatur teks agar berada di tengah */
-    margin-top: 20px; /* Menambahkan jarak dari elemen di atasnya */
-    border-top: 2px solid #a4d3a4; /* Memberikan garis atas untuk pemisah */
-    border-radius: 8px; /* Membuat sudut kotak menjadi sedikit melengkung */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    background-color: #64ea64; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 20px;
+    border-top: 2px solid #a4d3a4; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
